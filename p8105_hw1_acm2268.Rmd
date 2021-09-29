@@ -1,0 +1,31 @@
+---
+title: "p8105_hw1_acm2268"
+author: "Amanda Miles"
+date: "9/29/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+```
+
+#Question 1
+
+##Creating a Data Frame
+
+```{problem_1}
+
+set.seed(50)
+
+p1_df = tibble(
+  r_sample = rnorm(10),
+  pos_vec = r_sample > 0,
+  char_vec = c("sara", "steven", "kathryn", "diane", "doug", "anne", "vanessa", "justin", "kaitlyn", "jack"),
+  fact_vec = factor(c("blonde","brunette", "brunette", "black", "brunette", "blonde", "brunette", "black", "blonde", "blonde" ))
+)
+
+p1_df
+```
