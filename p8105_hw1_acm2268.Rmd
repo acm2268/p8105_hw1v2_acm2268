@@ -2,7 +2,7 @@
 title: "p8105_hw1_acm2268"
 author: "Amanda Miles"
 date: "9/29/2021"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -76,4 +76,19 @@ data("penguins", package = "palmerpenguins")
 
 skimr::skim(penguins)
 
+nrow(penguins)
+ncol(penguins)
+
 ```
+
+##Make scatterplot
+
+```{r plots}
+
+ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
+
+ggsave("p8105_hw1_plot_acm2268.pdf", height = 3, width = 5)
+
+```
+
+The penguins dataset has 344 rows and 8 columns. It contains 8 variables, including penguin species, island, penguin sex, penguin bill length in millimeters, bill depth in millimeters, flipper length in millimeters, body mass in grams, and the year. Three of these are factor variables (species, island, sex) and five are numeric variables (bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, year). The mean flipper length is 200.92 millimeters. 
