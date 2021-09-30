@@ -49,3 +49,31 @@ fact_vec_mean
 
 I was able to take the mean of the random sample of size 10 (r_Sample), which had a mean of -0.2440498. I was also able to take the mean of the logical vector indicating whether elements of the sample are greater than 0 (pos_vec), which was 0.5. However, I was unable to take the mean of the character vector or the factor vector. This makes sense since these two variables are not numeric so we cannot take their mean.
 
+#Converting variables to numeric
+
+```{r converting variables}
+
+as.numeric(pull(p1_df, r_sample))
+as.numeric(pull(p1_df, pos_vec))
+as.numeric(pull(p1_df, char_vec))
+as.numeric(pull(p1_df, fact_vec))
+
+```
+
+#Question 2
+
+##Load dataset
+
+```{r load dataset}
+
+data("penguins", package = "palmerpenguins")
+
+```
+
+##Describe dataset
+
+```{r describe dataset}
+
+skimr::skim(penguins)
+
+```
